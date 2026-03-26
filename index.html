@@ -1,347 +1,568 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YesGo 平移指南 · 财富社区</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
-      background: #FAFAF8;
-      color: #1A1A2E;
-      line-height: 1.7;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YesGo 老用户迁移指南 | 财富社区</title>
+<meta name="description" content="YesGo 老用户平滑迁移指南 - 资产平移规则、变现路径、合伙人体系、PANDA币申购教程">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',system-ui,-apple-system,sans-serif;background:#FAFAF8;color:#1A1A2E;line-height:1.7}
+.accent{color:#6C5CE7}
+.mint{color:#00B894}
+.gold{color:#E67E22}
+.coral{color:#E17055}
+.text2{color:#5A5A72}
+.text3{color:#9A9AB0}
+.container{max-width:680px;margin:0 auto;padding:0 20px}
 
-    .header {
-      background: #FFFFFF;
-      border-bottom: 1px solid #E8E8EE;
-      padding: 28px 20px 24px;
-    }
+/* Header */
+.header{background:#fff;border-bottom:1px solid #E8E8EE;padding:24px 20px}
+.header-inner{max-width:680px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#6C5CE7,#00B894);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:800}
+.logo-text{font-size:22px;font-weight:800;color:#1A1A2E;letter-spacing:-.5px}
+.brand{display:flex;align-items:center;gap:8px}
+.brand-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#F0B042,#E17055);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800}
+.brand-title{font-size:13px;font-weight:700}
+.brand-sub{font-size:9px;color:#9A9AB0;letter-spacing:1px}
 
-    .header-inner {
-      max-width: 680px;
-      margin: 0 auto;
-    }
+/* Tagline */
+.tagline-bar{max-width:680px;margin:0 auto;padding:16px 20px;text-align:center}
+.tagline-text{font-size:13px;color:#5A5A72;margin-bottom:8px}
+.badge{display:inline-block;padding:5px 18px;border-radius:20px;background:rgba(108,92,231,.1);color:#6C5CE7;font-size:12px;font-weight:600;letter-spacing:.5px}
 
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
+/* Section */
+.section{margin:20px 0 0}
+.section-head{display:flex;align-items:center;gap:10px;padding:20px 0 12px;border-bottom:2px solid #E8E8EE;margin-bottom:16px}
+.section-icon{font-size:24px}
+.section-num{font-size:11px;color:#9A9AB0;font-weight:700;letter-spacing:1px}
+.section-title{font-size:18px;font-weight:800;color:#1A1A2E}
+.section-sub{font-size:12px;color:#9A9AB0;margin-left:auto}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+/* Sub (collapsible) */
+.sub{margin-bottom:8px;border-radius:10px;border:1px solid #E8E8EE;background:#FAFAFC;overflow:hidden;transition:all .3s}
+.sub.open{border-color:rgba(108,92,231,.3);background:rgba(108,92,231,.02)}
+.sub-head{display:flex;align-items:center;gap:10px;padding:14px 16px;border:none;background:transparent;cursor:pointer;text-align:left;width:100%;font-family:inherit}
+.sub-title{flex:1;font-size:14px;font-weight:600;color:#1A1A2E}
+.sub-tag{font-size:11px;padding:2px 8px;border-radius:6px;font-weight:600;flex-shrink:0}
+.sub-body{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+.sub.open .sub-body{max-height:5000px}
+.sub-inner{padding:0 16px 16px;font-size:14px;color:#5A5A72;line-height:1.8}
+.chev{width:20px;height:20px;transition:transform .3s;color:#9A9AB0;flex-shrink:0}
+.sub.open .chev{transform:rotate(180deg)}
 
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #6C5CE7, #00B894);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFF;
-      font-size: 18px;
-      font-weight: 800;
-    }
+/* Box */
+.box{border-radius:10px;padding:14px 16px;margin:12px 0}
+.box-info{background:rgba(108,92,231,.05);border:1px solid rgba(108,92,231,.15)}
+.box-info .box-label{color:#6C5CE7}
+.box-warn{background:rgba(253,203,110,.1);border:1px solid rgba(253,203,110,.25)}
+.box-warn .box-label{color:#E67E22}
+.box-success{background:rgba(0,184,148,.06);border:1px solid rgba(0,184,148,.18)}
+.box-success .box-label{color:#00B894}
+.box-error{background:rgba(225,112,85,.06);border:1px solid rgba(225,112,85,.18)}
+.box-error .box-label{color:#E17055}
+.box-label{font-size:13px;font-weight:700;margin-bottom:4px}
 
-    .logo-text {
-      font-size: 24px;
-      font-weight: 800;
-      color: #1A1A2E;
-      letter-spacing: -0.5px;
-    }
+/* Pill */
+.pill{display:inline-block;padding:2px 10px;border-radius:6px;font-size:12px;font-weight:600;margin:2px 4px 2px 0}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+/* Step */
+.step{margin-bottom:16px}
+.step-row{display:flex;gap:12px;align-items:flex-start}
+.step-n{width:28px;height:28px;border-radius:50%;flex-shrink:0;background:rgba(108,92,231,.07);color:#6C5CE7;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step-title{font-size:14px;font-weight:600;color:#1A1A2E;margin-bottom:2px}
+.step-desc{font-size:13px;color:#5A5A72;line-height:1.7}
+.step-img{margin:10px 0 0 40px;border-radius:8px;overflow:hidden;border:1px solid #E8E8EE}
+.step-img img{width:100%;max-width:300px;display:block}
 
-    .brand-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #F0B042, #E17055);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFF;
-      font-size: 14px;
-      font-weight: 800;
-    }
+/* Image */
+.img-wrap{margin:12px 0;border-radius:10px;overflow:hidden;border:1px solid #E8E8EE}
+.img-wrap img{width:100%;display:block}
+.img-caption{padding:8px 12px;background:#FAFAFC;font-size:12px;color:#9A9AB0}
 
-    .brand-text {
-      line-height: 1.2;
-    }
+/* Video */
+.video-wrap{margin:16px 0;border-radius:10px;overflow:hidden;border:1px solid #E8E8EE}
+.video-wrap video{width:100%;display:block}
+.video-caption{padding:8px 12px;background:#FAFAFC;font-size:12px;color:#9A9AB0}
 
-    .brand-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #1A1A2E;
-    }
+/* Table */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.tbl th{padding:8px 6px;text-align:center;background:rgba(108,92,231,.06);color:#1A1A2E;font-weight:600;border-bottom:2px solid #E8E8EE;font-size:12px}
+.tbl td{padding:8px 6px;text-align:center;border-bottom:1px solid #E8E8EE;color:#5A5A72}
 
-    .brand-subtitle {
-      font-size: 9px;
-      color: #9A9AB0;
-      letter-spacing: 1px;
-    }
+/* Flow */
+.flow{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:12px 0 16px;padding:14px;background:rgba(108,92,231,.03);border-radius:10px}
+.flow-item{padding:6px 10px;border-radius:8px;font-size:11px;font-weight:600}
+.flow-arrow{color:#9A9AB0;font-size:14px}
 
-    .header-center {
-      text-align: center;
-    }
+/* Grid cards */
+.grid2{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.grid2 .card{flex:1;min-width:200px;padding:14px;border-radius:10px}
+.card-purple{background:rgba(108,92,231,.04);border:1px solid rgba(108,92,231,.1)}
+.card-mint{background:rgba(0,184,148,.04);border:1px solid rgba(0,184,148,.1)}
+.card-gold{background:rgba(253,203,110,.06);border:1px solid rgba(253,203,110,.15)}
+.card h4{font-size:13px;font-weight:700;margin-bottom:8px}
+.card p,.card .card-text{font-size:12px;color:#5A5A72;line-height:1.8}
 
-    .tagline {
-      font-size: 13px;
-      color: #5A5A72;
-      margin-bottom: 10px;
-    }
+/* Stat cards */
+.stat-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.stat{flex:1;min-width:140px;padding:12px;border-radius:8px;background:#fff;border:1px solid #E8E8EE;text-align:center}
+.stat-label{font-size:11px;color:#9A9AB0}
+.stat-val{font-size:22px;font-weight:800;color:#6C5CE7}
+.stat-sub{font-size:11px;color:#9A9AB0}
 
-    .badge {
-      display: inline-block;
-      padding: 6px 20px;
-      border-radius: 20px;
-      background: rgba(108, 92, 231, 0.1);
-      color: #6C5CE7;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+/* Checklist */
+.check{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;margin:4px 0}
+.check-even{background:rgba(108,92,231,.02);border:1px solid rgba(108,92,231,.05)}
+.check-odd{border:1px solid transparent}
+.check-icon{font-size:18px;flex-shrink:0}
+.check-text{font-size:13px;color:#1A1A2E}
 
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 24px 20px;
-    }
+/* Chat */
+.chat-wrap{border:1px solid #E8E8EE;border-radius:14px;overflow:hidden;background:#FAFAFC}
+.chat-login{padding:32px;text-align:center}
+.chat-login-icon{font-size:32px;margin-bottom:12px}
+.chat-login-title{font-size:15px;font-weight:600;color:#1A1A2E;margin-bottom:4px}
+.chat-login-sub{font-size:13px;color:#9A9AB0;margin-bottom:16px}
+.chat-pwd{width:100%;max-width:260px;padding:10px 14px;border-radius:10px;border:1px solid #E8E8EE;font-size:14px;color:#1A1A2E;background:#fff;outline:none;text-align:center;margin:0 auto 12px;display:block}
+.chat-pwd-err{font-size:12px;color:#E17055;margin-bottom:8px}
+.chat-btn{padding:10px 32px;border-radius:10px;border:none;background:#6C5CE7;color:#fff;font-size:14px;font-weight:600;cursor:pointer}
+.chat-msgs{height:340px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:linear-gradient(180deg,#FAFAFC,#F4F3F0)}
+.chat-msg{display:flex}
+.chat-msg.user{justify-content:flex-end}
+.chat-bubble{max-width:82%;padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.7}
+.chat-bubble.bot{background:#fff;color:#5A5A72;border:1px solid #E8E8EE;border-bottom-left-radius:4px}
+.chat-bubble.user-text{background:#6C5CE7;color:#fff;border-bottom-right-radius:4px}
+.chat-typing{padding:10px 18px;border-radius:12px;background:#fff;border:1px solid #E8E8EE;font-size:13px;color:#9A9AB0;border-bottom-left-radius:4px;display:none}
+.chat-quicks{padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap;border-top:1px solid #E8E8EE;background:#fff}
+.chat-quick-btn{padding:5px 12px;border-radius:16px;border:1px solid #E8E8EE;background:#FAFAFC;font-size:12px;color:#6C5CE7;cursor:pointer;font-weight:500}
+.chat-quick-btn:hover{background:rgba(108,92,231,.06)}
+.chat-input-row{padding:12px;display:flex;gap:8px;border-top:1px solid #E8E8EE;background:#fff}
+.chat-input{flex:1;padding:10px 14px;border-radius:10px;border:1px solid #E8E8EE;font-size:14px;color:#1A1A2E;background:#FAFAFC;outline:none;font-family:inherit}
+.chat-send{width:40px;height:40px;border-radius:10px;border:none;background:#6C5CE7;cursor:pointer;display:flex;align-items:center;justify-content:center}
 
-    .section {
-      background: #FFFFFF;
-      border: 1px solid #E8E8EE;
-      border-radius: 14px;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
+/* Highlight box */
+.highlight-box{margin:20px 0 8px;padding:20px;border-radius:12px;background:linear-gradient(135deg,rgba(108,92,231,.05),rgba(0,184,148,.05));border:1px solid rgba(108,92,231,.1)}
+.highlight-box h4{font-size:14px;font-weight:700;color:#6C5CE7;margin-bottom:12px}
 
-    .section-header {
-      padding: 16px 20px;
-      border-bottom: 1px solid #E8E8EE;
-      cursor: pointer;
-      user-select: none;
-    }
+/* Footer */
+.footer{text-align:center;padding:32px 0;font-size:12px;color:#9A9AB0;line-height:1.8}
+.footer-brand{display:inline-flex;align-items:center;gap:6px;margin-bottom:8px}
+.footer-disclaimer{margin-top:8px;font-size:11px}
 
-    .section-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #1A1A2E;
-    }
-
-    .section-content {
-      padding: 20px;
-      line-height: 1.8;
-      color: #5A5A72;
-      font-size: 14px;
-    }
-
-    .highlight {
-      color: #6C5CE7;
-      font-weight: 600;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-right: 4px;
-      margin-bottom: 4px;
-    }
-
-    .tag-purple { background: rgba(108, 92, 231, 0.1); color: #6C5CE7; }
-    .tag-green { background: rgba(0, 184, 148, 0.1); color: #00B894; }
-    .tag-yellow { background: rgba(253, 203, 110, 0.15); color: #FDCB6E; }
-    .tag-red { background: rgba(225, 112, 85, 0.15); color: #E17055; }
-
-    .question-box {
-      background: rgba(108, 92, 231, 0.05);
-      border-left: 3px solid #6C5CE7;
-      padding: 16px 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .question {
-      font-size: 14px;
-      font-weight: 600;
-      color: #1A1A2E;
-      margin-bottom: 8px;
-    }
-
-    .answer {
-      font-size: 14px;
-      color: #5A5A72;
-      line-height: 1.8;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #9A9AB0;
-      font-size: 12px;
-    }
-
-    @media (max-width: 600px) {
-      .header-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-      .logo-text {
-        font-size: 20px;
-      }
-    }
-  </style>
+@media(max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
+  .logo-text{font-size:20px}
+  .section-title{font-size:16px}
+  .section-sub{display:none}
+  .grid2 .card{min-width:100%}
+  .step-img{margin-left:0}
+}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-inner">
-      <div class="header-top">
-        <div class="logo">
-          <div class="logo-icon">Y</div>
-          <div class="logo-text">YesGo</div>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">Y</div>
+      <div class="logo-text">YesGo</div>
+    </div>
+    <div class="brand">
+      <div class="brand-icon">财</div>
+      <div>
+        <div class="brand-title">财富社区</div>
+        <div class="brand-sub">WEALTH COMMUNITY</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tagline-bar">
+  <div class="tagline-text">链上原生商业体生态 · PayFi × IRO × RWA</div>
+  <div class="badge">老用户平滑迁移指南</div>
+</div>
+
+<div class="container">
+
+  <!-- PART 01 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-icon">📋</span>
+      <div>
+        <div class="section-num">PART 01</div>
+        <div class="section-title">资产平移规则一览</div>
+      </div>
+      <div class="section-sub">5倍GV · 平移规则 · 账户处理</div>
+    </div>
+
+    <div class="sub open" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">资产怎么平移？5倍 GV 是什么意思？</div>
+        <span class="sub-tag" style="background:rgba(108,92,231,.1);color:#6C5CE7">核心</span>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <p style="margin-bottom:10">您在 Nexus 中的<strong>剩余本金</strong>将以 <strong class="accent">5 倍放大平移为 GV</strong>。</p>
+        <div style="overflow-x:auto">
+          <table class="tbl">
+            <thead><tr><th>用户</th><th>充入</th><th>已提出</th><th>剩余本金</th><th>平移 GV</th></tr></thead>
+            <tbody>
+              <tr><td style="font-weight:600;color:#1A1A2E">甲</td><td>10,000U</td><td>3,000U</td><td>7,000U</td><td class="accent" style="font-weight:600">35,000 GV</td></tr>
+              <tr><td style="font-weight:600;color:#1A1A2E">乙</td><td>5,000U</td><td>0U</td><td>5,000U</td><td class="accent" style="font-weight:600">25,000 GV</td></tr>
+              <tr><td style="font-weight:600;color:#1A1A2E">丙</td><td>10,000U</td><td>8,000U</td><td>2,000U</td><td class="accent" style="font-weight:600">10,000 GV</td></tr>
+              <tr><td style="font-weight:600;color:#1A1A2E">丁</td><td>10,000U</td><td>10,000U</td><td>0U</td><td class="text3">0（已全部提出）</td></tr>
+            </tbody>
+          </table>
         </div>
-        <div class="brand">
-          <div class="brand-icon">财</div>
-          <div class="brand-text">
-            <div class="brand-title">财富社区</div>
-            <div class="brand-subtitle">WEALTH COMMUNITY</div>
+        <div class="box box-success">
+          <div class="box-label">5倍GV 意味着什么？</div>
+          <div>· 只需用 <strong>1/5 的 GV</strong> 即可兑回本金等值<br>· 剩余 <strong>4/5 的 GV 全部为纯收益</strong><br>· 1 GV ≈ 1 USDT（平台内部价值锚定）</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">NXR / NXB 代币怎么处理？</div>
+        <span class="sub-tag" style="background:rgba(108,92,231,.1);color:#6C5CE7">利润</span>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <p style="margin-bottom:10">您账户中的 NXR、NXB 代币和理财收益，属于<strong>平台赠送的利润</strong>。</p>
+        <div class="step"><div class="step-row"><div class="step-n">1</div><div><div class="step-title">全部兑换为链上 USDT</div><div class="step-desc">将钱包中所有 NXR 和 NXB 代币兑换为链上 USDT。切记不要再投入理财。</div></div></div></div>
+        <div class="step"><div class="step-row"><div class="step-n">2</div><div><div class="step-title">用 USDT 购买合伙人</div><div class="step-desc">Nexus 链上的 USDT 可用于购买合伙人身份。大家根据自己账户中的金额，选择适合自己的等级即可，量力而行。</div></div></div></div>
+        <div class="step"><div class="step-row"><div class="step-n">3</div><div><div class="step-title">获得白名单权益</div><div class="step-desc">购买合伙人后即可获得对应等级的 LP 白名单资格，可在 PANDA 币等优质资产首发时优先认购。</div></div></div></div>
+        <div class="box box-error">
+          <div class="box-label">注意：NXR 的 U 不能直接申购 PANDA 币</div>
+          <div>申购最早期的 PANDA 代币需要 <strong>BSC/ENI 链上的 USDT</strong>。<br>但每天释放的 GV 可以兑换已上线的行业代币或提现。</div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">两条链购买合伙人的区别</div>
+        <span class="sub-tag" style="background:rgba(225,112,85,.1);color:#E17055">重要</span>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="grid2">
+          <div class="card card-gold" style="text-align:center">
+            <h4 style="color:#E67E22">Nexus 链购买</h4>
+            <span class="pill" style="background:rgba(0,184,148,.08);color:#00B894">白名单权益</span><br>
+            <span class="pill" style="background:rgba(154,154,176,.08);color:#9A9AB0">不含GV权益</span>
+            <div style="font-size:12px;color:#9A9AB0;margin-top:10px">适合先锁定白名单资格</div>
+          </div>
+          <div class="card card-mint" style="text-align:center">
+            <h4 style="color:#00B894">BSC 链购买</h4>
+            <span class="pill" style="background:rgba(0,184,148,.08);color:#00B894">白名单权益</span><br>
+            <span class="pill" style="background:rgba(0,184,148,.08);color:#00B894">GV收益权益</span>
+            <div style="font-size:12px;color:#9A9AB0;margin-top:10px">完整权益包，深度参与首选</div>
           </div>
         </div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">什么时候平移？多账户怎么办？</div>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
       </div>
-      <div class="header-center">
-        <div class="tagline">链上原生商业体生态 · PayFi × IRO × RWA</div>
-        <div class="badge">老用户平滑迁移指南</div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="box box-warn">
+          <div class="box-label">预计 4 月初左右</div>
+          <div>PANDA 代币上线后，GV 即可兑换变现。目前 Nexus APP 内已增设 YesGo 板块，<strong>现在就可以查看您的 GV 余额</strong>，如果数据有误请及时提交工单。</div>
+        </div>
+        <div class="box box-success">
+          <div class="box-label">多个账户？可以互转！</div>
+          <div>GV 后续支持账户间互转。多个钱包地址的平移核算以入金和出金钱包为准，技术团队提供合并工具。</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PART 02 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-icon">💰</span>
+      <div>
+        <div class="section-num">PART 02</div>
+        <div class="section-title">在 YesGo 如何变现赚钱？</div>
+      </div>
+      <div class="section-sub">合伙人收益 · PANDA币申购教程</div>
+    </div>
+
+    <div class="sub open" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">GV 释放与变现路径</div>
+        <span class="sub-tag" style="background:rgba(108,92,231,.1);color:#6C5CE7">基础</span>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="flow">
+          <span class="flow-item" style="background:rgba(108,92,231,.06);color:#6C5CE7">GV每日释放(万5)</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-item" style="background:rgba(108,92,231,.06);color:#6C5CE7">兑换行业代币</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-item" style="background:rgba(0,184,148,.05);color:#00B894">获得USDT</span>
+        </div>
+        <div class="box box-info">
+          <div class="box-label">回本周期预估</div>
+          <div>保守（币价不涨）：约 <strong>11 个月</strong> · 中性（币价微涨）：约 <strong>5-6 个月</strong> · 乐观（币价上涨）：约 <strong>3 个月</strong><br><span style="font-size:12px;color:#9A9AB0">以上为预估，实际受市场影响。</span></div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">合伙人等级与权益</div>
+        <span class="sub-tag" style="background:rgba(253,203,110,.1);color:#E67E22">成长体系</span>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="img-wrap">
+          <img src="IMG_PARTNER.jpg" alt="YesGo 合伙人成长体系一览">
+          <div class="img-caption">YesGo 合伙人成长体系一览</div>
+        </div>
+        <div class="box box-info">平级奖励均为三代穿透。全球合伙人享 20% 全网手续费分红 + 20 份 LP 白名单。升级只需补差价，根据自己情况选择合适的等级即可。</div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">推荐奖励一览</div>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="grid2">
+          <div class="card card-purple">
+            <h4 class="accent">推荐用户/合伙人</h4>
+            <div class="card-text">合伙人：直推 30% / 间推 15%<br>普通用户：直推 20% / 间推 10%</div>
+          </div>
+          <div class="card card-mint">
+            <h4 class="mint">推荐商家入驻</h4>
+            <div class="card-text">合伙人：30% 奖励<br>普通用户：20% 奖励</div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:#9A9AB0">其他权益池：个人推广排名 5% · 全球合伙人 3% · 活动池 10% · 团队推广排名 5% · 抽奖池 10%</div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">PANDA 币申购完整教程</div>
+        <span class="sub-tag" style="background:rgba(0,184,148,.05);color:#00B894">🐼 现在就可以准备</span>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="box box-success">
+          <div class="box-label">PANDA 币简介</div>
+          <div>由港银国际发行，YesGo 首个行业代币。白名单与合伙人等级绑定，每份白名单可申购 <strong>50U</strong> 的 PANDA 代币。</div>
+        </div>
+
+        <div class="video-wrap">
+          <video controls playsinline><source src="video.mp4" type="video/mp4">您的浏览器不支持视频播放</video>
+          <div class="video-caption">视频教程：PANDA 币申购操作全流程（备注：每个钱包准备 50U USDT）</div>
+        </div>
+
+        <p style="font-size:14px;font-weight:600;color:#1A1A2E;margin:16px 0 12px">图文分步教程</p>
+
+        <div class="step"><div class="step-row"><div class="step-n">1</div><div style="flex:1"><div class="step-title">打开 NexBat，进入 YesGo 板块</div><div class="step-desc">在 Bitget Wallet 中打开 www.nexbat.io，点击左上角菜单，找到「YesGo」入口并点击进入。</div></div></div>
+          <div class="step-img"><img src="IMG_S1.jpg" alt="Step 1"></div></div>
+
+        <div class="step"><div class="step-row"><div class="step-n">2</div><div style="flex:1"><div class="step-title">进入白名单绑定页面</div><div class="step-desc">进入 YesGo 后，可以看到「购买合伙人」区域和下方的「添加白名单」输入框。</div></div></div>
+          <div class="step-img"><img src="IMG_S2.jpg" alt="Step 2"></div></div>
+
+        <div class="step"><div class="step-row"><div class="step-n">3</div><div style="flex:1"><div class="step-title">输入钱包地址并添加</div><div class="step-desc">将您准备好的 BSC 钱包地址粘贴到输入框中，点击「添加」按钮。每个地址对应一份白名单配额。</div></div></div>
+          <div class="step-img"><img src="IMG_S3.jpg" alt="Step 3"></div></div>
+
+        <div class="step"><div class="step-row"><div class="step-n">4</div><div style="flex:1"><div class="step-title">确认白名单绑定成功</div><div class="step-desc">添加成功后，下方会显示「当前白名单数量」和已绑定的钱包地址。确认无误即可。</div></div></div>
+          <div class="step-img"><img src="IMG_S4.jpg" alt="Step 4"></div></div>
+
+        <div class="box box-info">
+          <div class="box-label">白名单份数 = 可绑定钱包数</div>
+          <div>初级 2 个 · 中级 4 个 · 高级 7 个 · 城市 10 个 · <strong>全球 20 个</strong><br>每个钱包可申购 <strong>50U</strong> 的 PANDA 代币，需提前准备好 50U USDT + 少量 BNB。</div>
+        </div>
+
+        <div class="step"><div class="step-row"><div class="step-n">5</div><div style="flex:1"><div class="step-title">等待申购开放，届时一键认购</div><div class="step-desc">白名单绑定完成后，等待官方公告。届时在 App 内直接申购即可。</div></div></div></div>
+
+        <div class="highlight-box">
+          <h4 class="accent">收益潜力参考（以全球合伙人为例）</h4>
+          <div class="stat-row">
+            <div class="stat"><div class="stat-label">可绑定钱包</div><div class="stat-val">20个</div></div>
+            <div class="stat"><div class="stat-label">申购总投入</div><div class="stat-val">1,000U</div><div class="stat-sub">20 × 50U</div></div>
+          </div>
+          <div style="font-size:13px;color:#5A5A72;line-height:2">
+            · 如果 PANDA 币上涨 <strong>5 倍</strong>：1,000U → 5,000U，<span class="mint" style="font-weight:600">净收益约 4,000U</span><br>
+            · 如果 PANDA 币上涨 <strong>10 倍</strong>：1,000U → 10,000U，<span class="mint" style="font-weight:600">净收益约 9,000U</span>
+          </div>
+          <div class="box box-warn">以上为基于代币上涨的<strong>理想情景预估</strong>，实际收益受市场行情、流动性等因素影响。但 PANDA 币有真实消费利润回购支撑，底层逻辑扎实，早期参与者往往能获得更好的机会。</div>
+        </div>
+
+        <div class="box box-error">
+          <div class="box-label">重要提醒</div>
+          <div>· NXR 里的 U <strong>不能</strong>直接用于首发申购，需要 BSC/ENI 链上的 USDT<br>· 每天释放的 GV 可以兑换已上线的行业代币或提现，这是另一条变现路径</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PART 03 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-icon">✅</span>
+      <div>
+        <div class="section-num">PART 03</div>
+        <div class="section-title">当下我可以做什么？</div>
+      </div>
+      <div class="section-sub">查询GV · 工单申诉 · 行动清单</div>
+    </div>
+
+    <div class="sub open" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">查询 GV 并核对</div>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="step"><div class="step-row"><div class="step-n">1</div><div><div class="step-title">打开 Nexus APP</div><div class="step-desc">登录账号，进入 YesGo 板块，现在就可以查看您当前的 GV 余额。</div></div></div></div>
+        <div class="box box-warn"><div class="box-label">请注意</div><div>目前显示的是 <strong>1 倍的 GV</strong>（即您的剩余本金数额）。平移到 YesGo 后才会变成 <strong>5 倍的 GV</strong>。如果看到的数字和剩余本金差不多，那就是对的。</div></div>
+        <div class="step"><div class="step-row"><div class="step-n">2</div><div><div class="step-title">核算</div><div class="step-desc">当前显示 GV ≈ 原始充入 USDT - 已跨链提出 USDT（即剩余本金）。平移后自动×5。</div></div></div></div>
+        <div class="step"><div class="step-row"><div class="step-n">3</div><div><div class="step-title">数据有误？提交工单</div><div class="step-desc">App → 我的 → 帮助与反馈 → 提交工单。</div></div></div></div>
+      </div></div>
+    </div>
+
+    <div class="sub" onclick="toggleSub(this)">
+      <div class="sub-head">
+        <div class="sub-title">行动清单</div>
+        <svg class="chev" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+      </div>
+      <div class="sub-body"><div class="sub-inner">
+        <div class="check check-even"><span class="check-icon">💱</span><span class="check-text">将所有 NXR/NXB 代币兑换为链上 USDT</span></div>
+        <div class="check check-odd"><span class="check-icon">🤝</span><span class="check-text">用 USDT 购买合伙人（根据自己金额选择合适的等级）</span></div>
+        <div class="check check-even"><span class="check-icon">🔍</span><span class="check-text">核查 GV 余额，有误提交工单</span></div>
+        <div class="check check-odd"><span class="check-icon">🔗</span><span class="check-text">绑定白名单，多个钱包都绑定好</span></div>
+        <div class="check check-even"><span class="check-icon">🐼</span><span class="check-text">熟悉 PANDA 币申购流程（现在就可以了解）</span></div>
+        <div class="check check-odd"><span class="check-icon">👛</span><span class="check-text">准备钱包，每个钱包准备 50U，用于申购 PANDA 代币</span></div>
+        <div class="check check-even"><span class="check-icon">📢</span><span class="check-text">关注官方社群获取最新动态</span></div>
+        <div class="check check-odd"><span class="check-icon">🔗</span><span class="check-text">开始推荐好友和商家，积累推荐收益</span></div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PART 04: Chat -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-icon">💬</span>
+      <div>
+        <div class="section-num">PART 04</div>
+        <div class="section-title">还有疑问？在线提问</div>
+      </div>
+      <div class="section-sub">输入密码验证后，智能助手为您即时解答</div>
+    </div>
+
+    <div class="chat-wrap" id="chatWrap">
+      <div class="chat-login" id="chatLogin">
+        <div class="chat-login-icon">🔒</div>
+        <div class="chat-login-title">智能问答需要验证</div>
+        <div class="chat-login-sub">请输入访问密码</div>
+        <input class="chat-pwd" id="chatPwd" type="password" placeholder="请输入密码" onkeydown="if(event.key==='Enter')tryLogin()">
+        <div class="chat-pwd-err" id="chatPwdErr" style="display:none">密码不正确，请重试</div>
+        <button class="chat-btn" onclick="tryLogin()">进入问答</button>
+      </div>
+      <div id="chatArea" style="display:none">
+        <div class="chat-msgs" id="chatMsgs"></div>
+        <div class="chat-quicks" id="chatQuicks"></div>
+        <div class="chat-input-row">
+          <input class="chat-input" id="chatInput" placeholder="输入您的问题..." onkeydown="if(event.key==='Enter')sendMsg()">
+          <button class="chat-send" onclick="sendMsg()"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l14-7-7 14v-7H3z" fill="#FFF"/></svg></button>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-
-    <div class="section">
-      <div class="section-content">
-        <h2 style="font-size: 16px; font-weight: 700; margin-bottom: 20px; color: #1A1A2E;">常见问题解答</h2>
-
-        <div class="question-box">
-          <div class="question">📌 资产怎么平移？</div>
-          <div class="answer">
-            剩余本金（原始充入 USDT - 已跨链提出 USDT）以 <span class="highlight">5 倍放大平移为 GV</span>。例如剩余 20,000U → 100,000GV。NXR/NXB 换出的 USDT 属于利润，建议购买合伙人。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">💎 能用 NXR 的 U 买 Panda 吗？</div>
-          <div class="answer">
-            每天释放的 GV 可以兑换已上线的行业代币或提现。但申购最早期的 <span class="highlight">PANDA 代币需要 BSC/ENI 链上的 USDT</span>，NXR 里的 U 不能直接用于首发申购。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">📅 什么时候能变现？</div>
-          <div class="answer">
-            预计 <span class="highlight">4 月初左右</span>，PANDA 代币上线后 GV 可兑换变现。请关注官方社群。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">🔄 多个账户 GV 能互转吗？</div>
-          <div class="answer">
-            可以！GV 后续支持账户间互转，方便统一管理。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">💰 NXR 和 NXB 有什么区别？</div>
-          <div class="answer">
-            <span class="tag tag-purple">NXR</span> 是治理代币<br>
-            <span class="tag tag-green">NXB</span> 是回购销毁代币<br><br>
-            建议：全部兑换为链上 USDT，属于平台赠送的利润，可购买合伙人。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">⛓ Nexus 链和 BSC 链有区别？</div>
-          <div class="answer">
-            <span class="tag tag-purple">Nexus 链</span> 购买合伙人 → 仅白名单<br>
-            <span class="tag tag-green">BSC 链</span> → 白名单 + <span class="highlight">GV 完整权益</span>
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">📊 GV 如何兑换、变现、释放？</div>
-          <div class="answer">
-            GV 按 <span class="highlight">每日万分之五逐减释放</span>，释放的 GV 可兑换行业代币获得 USDT。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">🏆 合伙人等级有哪些？</div>
-          <div class="answer">
-            <span class="tag tag-purple">初级</span> 500U<br>
-            <span class="tag tag-green">中级</span> 1000U<br>
-            <span class="tag tag-yellow">高级</span> 2000U<br>
-            <span class="tag tag-red">城市</span> 5000U<br>
-            <span class="tag tag-red">全球</span> 10000U<br><br>
-            升级补差价。全球享 20% 手续费分红 + 20 份白名单。根据自己情况选择即可。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">👥 推荐奖励怎么算？</div>
-          <div class="answer">
-            <span class="tag tag-purple">合伙人</span>：直推 30% / 间推 15%<br>
-            <span class="tag tag-green">用户</span>：直推 20% / 间推 10%<br>
-            <span class="tag tag-yellow">推荐商家</span>：合伙人 30%，用户 20%
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">⏱ 多久回本？</div>
-          <div class="answer">
-            <span class="tag tag-red">保守</span> 约 11 个月<br>
-            <span class="tag tag-yellow">中性</span> 5-6 个月<br>
-            <span class="tag tag-green">乐观</span> 约 3 个月<br><br>
-            受市场影响。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">📮 GV 数据不对怎么办？</div>
-          <div class="answer">
-            数据有误请通过 <span class="highlight">App → 我的 → 帮助与反馈 → 提交工单</span>。
-          </div>
-        </div>
-
-        <div class="question-box">
-          <div class="question">💯 5 倍 GV 是什么意思？</div>
-          <div class="answer">
-            5 倍 GV 是保障方案。只需 1/5 兑回本金，剩余 4/5 为纯收益。1GV ≈ 1USDT。
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
+  <!-- Footer -->
   <div class="footer">
-    <div>YesGo · 财富社区</div>
-    <div style="margin-top: 8px;">WEALTH COMMUNITY · 链上原生商业体生态</div>
+    <div class="footer-brand">
+      <div style="width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#F0B042,#E17055);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:800">财</div>
+      <span style="font-size:13px;font-weight:700;color:#5A5A72">财富社区</span>
+      <span style="font-size:11px;color:#9A9AB0">×</span>
+      <span style="font-size:13px;font-weight:700;color:#5A5A72">YesGo</span>
+    </div>
+    <div>让消费持续创造资产 · 链上原生商业体生态</div>
+    <div class="footer-disclaimer">本页面仅供参考，不构成任何投资建议</div>
+    <div class="footer-disclaimer">财富社区出品 · WEALTH COMMUNITY</div>
   </div>
 
+</div>
+
+<script>
+function toggleSub(el){el.classList.toggle('open')}
+
+// Chat Bot
+const KB=[
+  {q:["nxr","NXR","认购","panda","Panda","买代币"],a:"每天释放的GV可以兑换已上线的行业代币或提现。但申购最早期的PANDA代币需要BSC/ENI链上的USDT，NXR里的U不能直接用于首发申购。"},
+  {q:["资产","平移","本金","怎么办","迁移"],a:"剩余本金（原始充入USDT-已跨链提出USDT）以5倍放大平移为GV。例如剩余20,000U→100,000GV。NXR/NXB换出的USDT属于利润，建议购买合伙人。"},
+  {q:["什么时候","时间","几月","何时","上线"],a:"预计4月初左右，PANDA代币上线后GV可兑换变现。请关注官方社群。"},
+  {q:["账户","互转","多个"],a:"可以！GV后续支持账户间互转，方便统一管理。"},
+  {q:["NXB","NXR","代币","区别"],a:"NXR是治理代币，NXB是回购销毁代币。建议全部兑换为链上USDT，属于平台赠送的利润，可购买合伙人。"},
+  {q:["Nexus","BSC","区别","白名单","GV权益"],a:"Nexus链购买合伙人→仅白名单。BSC链→白名单+GV完整权益。"},
+  {q:["GV","兑换","变现","释放"],a:"GV按每日万分之五逐减释放，释放的GV可兑换行业代币获得USDT。"},
+  {q:["合伙人","等级"],a:"5级：初级500U→中级1000U→高级2000U→城市5000U→全球10000U。升级补差价。全球享20%手续费分红+20份白名单。根据自己情况选择即可。"},
+  {q:["推荐","直推","间推","赚钱"],a:"合伙人：直推30%/间推15%。用户：直推20%/间推10%。推荐商家：合伙人30%，用户20%。"},
+  {q:["回本"],a:"保守约11个月，中性5-6个月，乐观约3个月。受市场影响。"},
+  {q:["工单","GV不对","数据","有误"],a:"数据有误请通过App→我的→帮助与反馈→提交工单。"},
+  {q:["5倍","五倍"],a:"5倍GV是保障方案。只需1/5兑回本金，剩余4/5为纯收益。1GV≈1USDT。"}
+];
+
+function matchQ(input){
+  if(!input.trim())return null;
+  let best=null,bs=0;
+  for(const item of KB){
+    let s=0;
+    for(const k of item.q){if(input.toLowerCase().includes(k.toLowerCase()))s++}
+    if(s>bs){bs=s;best=item}
+  }
+  return bs>0?best.a:"暂时无法回答，请通过App工单系统联系客服或在官方社群提问。";
+}
+
+const quicks=["资产怎么平移？","能用NXR的U买Panda吗？","什么时候能变现？","多个账户GV能互转吗？","合伙人等级有哪些？"];
+let msgs=[{r:"bot",t:"您好！我是YesGo助手，资产平移、合伙人、PANDA币等问题都可以问我 👇"}];
+
+function renderMsgs(){
+  const c=document.getElementById('chatMsgs');
+  c.innerHTML=msgs.map(m=>'<div class="chat-msg '+(m.r==='user'?'user':'')+'"><div class="chat-bubble '+(m.r==='user'?'user-text':'bot')+'">'+m.t+'</div></div>').join('');
+  c.scrollTop=c.scrollHeight;
+}
+
+function renderQuicks(){
+  document.getElementById('chatQuicks').innerHTML=quicks.map(q=>'<button class="chat-quick-btn" onclick="sendMsg(\''+q+'\')">'+q+'</button>').join('');
+}
+
+function tryLogin(){
+  const pwd=document.getElementById('chatPwd').value;
+  if(pwd==="caifushequ888"){
+    document.getElementById('chatLogin').style.display='none';
+    document.getElementById('chatArea').style.display='block';
+    renderMsgs();renderQuicks();
+  }else{
+    document.getElementById('chatPwdErr').style.display='block';
+  }
+}
+
+function sendMsg(text){
+  const q=text||document.getElementById('chatInput').value.trim();
+  if(!q)return;
+  msgs.push({r:"user",t:q});
+  document.getElementById('chatInput').value='';
+  renderMsgs();
+  setTimeout(()=>{
+    msgs.push({r:"bot",t:matchQ(q)});
+    renderMsgs();
+  },500+Math.random()*700);
+}
+</script>
 </body>
 </html>
