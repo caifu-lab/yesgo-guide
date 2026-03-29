@@ -263,8 +263,44 @@ function App(){
         </Sub>
       </Section>
 
-      <Section icon="💬" num="PART 04" title="还有疑问？在线提问" sub="输入密码验证后，智能助手为您即时解答">
+      <Section icon=\"💬" num=\"PART 04" title="还有疑问？在线提问" sub="输入密码验证后，智能助手为您即时解答">
         <Chat/>
+      </Section>
+
+      {/* ===== PART 05: 社区服务 ===== */}
+      <Section icon="🌟" num="PART 05" title="财富社区服务" sub="多维度服务支持 · 全方位陪伴您的投资旅程">
+        <Sub title="我们的服务体系" open={true}>
+          <div style={{margin:"12px 0",padding:20,borderRadius:12,background:"linear-gradient(135deg,#6C5CE708,#00B89408)",border:`1px solid ${C.accent}20`}}>
+            <div style={{fontSize:14,fontWeight:600,color:C.text,marginBottom:14}}>财富社区为您提供以下服务：</div>
+            <div style={{display:"grid",gap:12}}>
+              {[
+                {icon:"🤖",title:"Telegram AI 助手",desc:"7×24小时智能问答机器人，覆盖 GV、平移、PANDA 币、合伙人等所有问题。加入 Telegram 群直接提问即可自动获得回复。",color:C.accent},
+                {icon:"🌐",title:"社区网站教程",desc:"完整的图文操作指南，涵盖资产平移、PANDA 币申购、利润提取、白名单绑定等全流程，随时查阅。",color:C.mint},
+                {icon:"🌅",title:"每日早间答疑",desc:"每天早上 9:00 腾讯会议实时答疑，社区讲师在线解答疑问，手把手指导操作。",color:"#F0B042"},
+                {icon:"🌙",title:"晚间社区课程",desc:"每天晚上 8:30 社区讲师专场直播，深度讲解平台动态、行业分析、操作技巧。",color:C.coral},
+                {icon:"📊",title:"每日群聊总结",desc:"AI 助手自动汇总每日群聊精华，生成话题、活跃度、精选消息总结，不错过任何重要信息。",color:"#6C5CE7"},
+                {icon:"🎉",title:"新成员专属服务",desc:"新成员入群即获 AI 欢迎引导，快速了解社区生态和操作流程，轻松上手。",color:"#E84393"},
+              ].map((item,i)=>(
+                <div key={i} style={{display:"flex",gap:12,padding:14,borderRadius:10,background:C.card,border:`1px solid ${C.border}`}}>
+                  <div style={{width:42,height:42,borderRadius:10,background:`${item.color}12`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:20,flexShrink:0}}>{item.icon}</div>
+                  <div>
+                    <div style={{fontSize:14,fontWeight:700,color:C.text,marginBottom:4}}>{item.title}</div>
+                    <div style={{fontSize:12.5,color:C.text2,lineHeight:1.7}}>{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <Box type="info" label="参与方式">
+            <div style={{fontSize:13,lineHeight:2.2,color:C.text}}>
+              <strong>📖 社区教程网站：</strong><a href="https://caifu-lab.github.io/yesgo-guide/" target="_blank" style={{color:C.accent}}>https://caifu-lab.github.io/yesgo-guide/</a><br/>
+              <strong>🤖 Telegram 社区群：</strong>加入群后直接提问，AI 助手自动回复<br/>
+              <strong>🌅 早间答疑（9:00）：</strong>腾讯会议号 505-5328-8551<br/>
+              <strong>🌙 晚间课程（20:30）：</strong>腾讯会议号 505-5328-8551
+            </div>
+          </Box>
+        </Sub>
       </Section>
 
       <div style={{textAlign:"center",padding:"32px 0 0",fontSize:12,color:C.text3,lineHeight:1.8}}>
